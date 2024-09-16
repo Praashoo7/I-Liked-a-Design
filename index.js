@@ -1,3 +1,149 @@
+/* ----------------------------- THE-ONLOAD ----------------------------- */
+
+window.addEventListener('load', function() {
+    openHelp()
+});
+
+
+
+/* ----------------------------- INFO-POPUP ----------------------------- */
+
+function openHelp(){
+    document.getElementById('creditInfo').style.display = 'flex'
+    document.body.style.overflow = "hidden"
+}
+
+function closeHelp(){
+    document.getElementById('creditInfo').style.display = 'none'
+    document.body.style.overflow = ""
+}
+
+
+
+/* ------------------------------ CONNECTING-GITHUB ------------------------------ */
+
+GitHubCalendar(".calendar", "praashoo7", { responsive: true });
+
+
+
+/* ------------------------------ PROJECT-OPEN-CLOSE ------------------------------ */
+
+let applyBgColor = "#53FFB0";
+
+const colorMap = {
+    red: "#FF1212",
+    white: "#ECECEC",
+    green: "#53FFB0",
+    purple: "#FF9AFF"
+};
+
+const buttonStates = {};
+
+function updateButtonStyles() {
+    Object.keys(buttonStates).forEach(ID => {
+        const button = document.getElementById(ID);
+        const contentDiv = document.getElementById(ID + "Open");
+        if (buttonStates[ID]) {
+            button.style.backgroundColor = applyBgColor;
+            button.style.color = "black";
+        } else {
+            button.style.backgroundColor = "transparent";
+            button.style.color = applyBgColor;
+        }
+    });
+}
+
+function openData(ID) {
+    if (buttonStates[ID] === undefined) {
+        buttonStates[ID] = false;
+
+        const button = document.getElementById(ID);
+        button.addEventListener('mouseenter', () => {
+            if (!buttonStates[ID]) {
+                button.style.backgroundColor = applyBgColor;
+                button.style.color = "black";
+            }
+        });
+        button.addEventListener('mouseleave', () => {
+            if (!buttonStates[ID]) {
+                button.style.backgroundColor = "transparent";
+                button.style.color = applyBgColor;
+            }
+        });
+    }
+
+    buttonStates[ID] = !buttonStates[ID];
+
+    const button = document.getElementById(ID);
+    const contentDiv = document.getElementById(ID + "Open");
+
+    if (buttonStates[ID]) {
+        contentDiv.style.display = "flex";
+        button.style.backgroundColor = applyBgColor;
+        button.style.color = "black";
+    } else {
+        contentDiv.style.display = "none";
+        button.style.backgroundColor = "transparent";
+        button.style.color = applyBgColor;
+    }
+}
+
+
+
+/* -------------------------------- THEME-CHANGE -------------------------------- */
+
+function themeChange(ID) {
+    const color = colorMap[ID];
+    document.documentElement.setAttribute('data-theme', ID);
+    localStorage.setItem('theme', ID);
+    applyBgColor = color;  // Update the global color variable
+
+    Object.keys(colorMap).forEach(key => {
+        const btn = document.getElementById(key);
+        if (key === ID) {
+            btn.style.backgroundColor = color;
+            document.getElementById('pfpImageSRC').src = "imgs/pfpImages/" + ID + ".webp"
+            document.getElementById('windowIcon').href = "imgs/pfpImages/pfpImagesR/" + ID + ".webp"
+            btn.style.color = "black";
+        } else {
+            btn.style.backgroundColor = "transparent";
+            btn.style.color = color;
+        }
+    });
+
+    updateButtonStyles();
+}
+
+const savedTheme = localStorage.getItem('theme') || 'green';
+themeChange(savedTheme);
+
+
+
+/* ---------------------------------- MAIL-TO ---------------------------------- */
+
+function mailDefault(){
+    var email = "meprashant00@gmail.com";
+    window.open(`mailto:${email}`);
+}
+
+
+
+/* ----------------------------- SMALL-DEVICE ----------------------------- */
+
+window.addEventListener('resize', function(){
+    if(window.innerWidth < 281){
+        document.querySelector('.main').style.display = 'none'
+        document.querySelector('.footer').style.display = 'none'
+        document.querySelector('.creditInfo').style.display = 'none'
+    } else {
+        document.querySelector('.main').style.display = 'flex'
+        document.querySelector('.footer').style.display = 'flex'
+        document.querySelector('.creditInfo').style.display = 'flex'
+    }
+})
+
+
+
 // /* ------------------------------ CONNECTING-SPOTIFY ------------------------------ */
 
 // const clientId = '';
@@ -370,148 +516,3 @@
 //         getCurrentlyPlaying(accessToken);
 //     }
 // }, 10000);
-
-
-/* ----------------------------- THE-ONLOAD ----------------------------- */
-
-window.addEventListener('load', function() {
-    openHelp()
-});
-
-
-
-/* ----------------------------- INFO-POPUP ----------------------------- */
-
-function openHelp(){
-    document.getElementById('creditInfo').style.display = 'flex'
-    document.body.style.overflow = "hidden"
-}
-
-function closeHelp(){
-    document.getElementById('creditInfo').style.display = 'none'
-    document.body.style.overflow = ""
-}
-
-
-
-/* ------------------------------ CONNECTING-GITHUB ------------------------------ */
-
-GitHubCalendar(".calendar", "praashoo7", { responsive: true });
-
-
-
-/* ------------------------------ PROJECT-OPEN-CLOSE ------------------------------ */
-
-let applyBgColor = "#53FFB0";
-
-const colorMap = {
-    red: "#FF1212",
-    white: "#ECECEC",
-    green: "#53FFB0",
-    purple: "#FF9AFF"
-};
-
-const buttonStates = {};
-
-function updateButtonStyles() {
-    Object.keys(buttonStates).forEach(ID => {
-        const button = document.getElementById(ID);
-        const contentDiv = document.getElementById(ID + "Open");
-        if (buttonStates[ID]) {
-            button.style.backgroundColor = applyBgColor;
-            button.style.color = "black";
-        } else {
-            button.style.backgroundColor = "transparent";
-            button.style.color = applyBgColor;
-        }
-    });
-}
-
-function openData(ID) {
-    if (buttonStates[ID] === undefined) {
-        buttonStates[ID] = false;
-
-        const button = document.getElementById(ID);
-        button.addEventListener('mouseenter', () => {
-            if (!buttonStates[ID]) {
-                button.style.backgroundColor = applyBgColor;
-                button.style.color = "black";
-            }
-        });
-        button.addEventListener('mouseleave', () => {
-            if (!buttonStates[ID]) {
-                button.style.backgroundColor = "transparent";
-                button.style.color = applyBgColor;
-            }
-        });
-    }
-
-    buttonStates[ID] = !buttonStates[ID];
-
-    const button = document.getElementById(ID);
-    const contentDiv = document.getElementById(ID + "Open");
-
-    if (buttonStates[ID]) {
-        contentDiv.style.display = "flex";
-        button.style.backgroundColor = applyBgColor;
-        button.style.color = "black";
-    } else {
-        contentDiv.style.display = "none";
-        button.style.backgroundColor = "transparent";
-        button.style.color = applyBgColor;
-    }
-}
-
-
-
-/* -------------------------------- THEME-CHANGE -------------------------------- */
-
-function themeChange(ID) {
-    const color = colorMap[ID];
-    document.documentElement.setAttribute('data-theme', ID);
-    localStorage.setItem('theme', ID);
-    applyBgColor = color;  // Update the global color variable
-
-    Object.keys(colorMap).forEach(key => {
-        const btn = document.getElementById(key);
-        if (key === ID) {
-            btn.style.backgroundColor = color;
-            document.getElementById('pfpImageSRC').src = "imgs/pfpImages/" + ID + ".webp"
-            document.getElementById('windowIcon').href = "imgs/pfpImages/pfpImagesR/" + ID + ".webp"
-            btn.style.color = "black";
-        } else {
-            btn.style.backgroundColor = "transparent";
-            btn.style.color = color;
-        }
-    });
-
-    updateButtonStyles();
-}
-
-const savedTheme = localStorage.getItem('theme') || 'green';
-themeChange(savedTheme);
-
-
-
-/* ---------------------------------- MAIL-TO ---------------------------------- */
-
-function mailDefault(){
-    var email = "meprashant00@gmail.com";
-    window.open(`mailto:${email}`);
-}
-
-
-
-/* ----------------------------- SMALL-DEVICE ----------------------------- */
-
-window.addEventListener('resize', function(){
-    if(window.innerWidth < 281){
-        document.querySelector('.main').style.display = 'none'
-        document.querySelector('.footer').style.display = 'none'
-        document.querySelector('.creditInfo').style.display = 'none'
-    } else {
-        document.querySelector('.main').style.display = 'flex'
-        document.querySelector('.creditInfo').style.display = 'flex'
-        document.querySelector('.creditInfo').style.display = 'flex'
-    }
-})
