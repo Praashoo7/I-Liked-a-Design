@@ -7,7 +7,9 @@
 
 ## Info
 
-This Portfolio is designed by Facu Motanaro, unlike my original portfolio, which is designed by me. I am developing some of the designs that I just can't resist bringing to life! Check out my Original Portfolio below and also check out Facu Motanaro's portfolio!
+This Portfolio is designed by Facu Motanaro, unlike my original portfolio, which is designed by me. I am developing some of the designs that I just can't resist bringing to life! Check out my Original Portfolio below and also check out Facu Motanaro's portfolio!<br><br>
+Facu Motanaro's [Portfolio](https://facumontanaro.com/)<br>
+My [Portfolio](https://praashoo7.github.io/Portfolio/)
 
 ## Credits
 
