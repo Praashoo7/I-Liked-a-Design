@@ -25,4 +25,4 @@ The HTML, CSS, and JavaScript implementation is the work of Prashant[Owner of th
 
 All rights reserved. The design and code in this repository may not be used, copied, modified, or distributed without the explicit permission of both Prashant[Owner of this Repository] and Facu Motanaro.
 
-© 2024 Prashant
+© 2024 Prashant - Facu Motanaro
