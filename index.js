@@ -1,11 +1,3 @@
-/* ----------------------------- THE-ONLOAD ----------------------------- */
-
-window.addEventListener('load', function() {
-    openHelp()
-});
-
-
-
 /* ----------------------------- INFO-POPUP ----------------------------- */
 
 function openHelp(){
@@ -134,13 +126,22 @@ window.addEventListener('resize', function(){
     if(window.innerWidth < 281){
         document.querySelector('.main').style.display = 'none'
         document.querySelector('.footer').style.display = 'none'
-        document.querySelector('.creditInfo').style.display = 'none'
     } else {
         document.querySelector('.main').style.display = 'flex'
         document.querySelector('.footer').style.display = 'flex'
-        document.querySelector('.creditInfo').style.display = 'flex'
     }
 })
+
+
+
+/* ----------------------------- THE-ONLOAD ----------------------------- */
+
+window.addEventListener('load', function() {
+    if(window.innerWidth < 281){
+    } else {
+        openHelp()
+    }
+});
 
 
 
