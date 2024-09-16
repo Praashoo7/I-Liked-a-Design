@@ -11,7 +11,7 @@ This Portfolio is designed by Facu Motanaro, unlike my original portfolio, which
 
 ## Credits
 
-  - Designed by [Facu Motanaro]/(https://facumontanaro.com/)
+  - Designed by [Facu Motanaro](https://facumontanaro.com/)
   - Design [Link](https://x.com/facumontanaro_/status/1833155791777378475)
 
 ## License
