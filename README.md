@@ -13,6 +13,8 @@ This Portfolio is designed by Facu Motanaro, unlike my original portfolio, which
 
   - Designed by [Facu Motanaro](https://facumontanaro.com/)
   - Design [Link](https://x.com/facumontanaro_/status/1833155791777378475)
+  - LcdSolid font from [FontSpace](https://www.fontspace.com/)
+  - Icons from [SVGRepo.](https://www.svgrepo.com/)
 
 ## License
 
