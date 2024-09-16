@@ -149,7 +149,7 @@ window.addEventListener('load', function() {
 
 // const clientId = '';
 // const clientSecret = ''; // This should be handled server-side in a real application
-// const redirectUri = 'http://127.0.0.1:5501/';
+// const redirectUri = '';
 // const scope = 'user-read-currently-playing user-read-playback-state';
 
 // function debugLog(message) {
