@@ -1,4 +1,4 @@
-# [I-Liked-a-Design-Part-2](https://praashoo7.github.io/I-Liked-a-Design-Part-2/)
+# [I-Liked-a-Design](https://praashoo7.github.io/I-Liked-a-Design/)
 
 ![Readme Image](imgs/ReadMe-Images/ReadMe-Green.png)<br>
 ![Readme Image](imgs/ReadMe-Images/ReadMe-Red.png)<br>
