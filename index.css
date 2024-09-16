@@ -62,7 +62,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column; 
-    background-image: url(imgs/mainBg.png);
+    background-image: url(imgs/mainBg.webp);
 }
 
 .main{
