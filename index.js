@@ -140,6 +140,7 @@ window.addEventListener('load', function() {
     if(window.innerWidth < 281){
     } else {
         openHelp()
+        document.getElementById('green').style.backgroundColor = "#53FFB0"
     }
 });
 
