@@ -11,9 +11,8 @@ This Portfolio is designed by Facu Motanaro, unlike my original portfolio, which
 
 ## Credits
 
-  - Fredoka font from [Google Fonts.](https://fonts.google.com/specimen/Fredoka?preview.text=At%20the%20first%20page%20choose%20a%20card%20in%20your%20mind.&query=Fredoka&stroke=Sans+Serif)
-  - Icons from [SVGRepo.](https://www.svgrepo.com/)
-  - Chart from [AMCHARTS.](https://www.amcharts.com/)
+  - Designed by [Facu Motanaro]/(https://facumontanaro.com/)
+  - Design [Link](https://x.com/facumontanaro_/status/1833155791777378475)
 
 ## License
 
