@@ -1,0 +1,922 @@
+/* ----------------------------------- FONT -----------------------------------*/
+
+@font-face {
+    font-family: LcdSolid;
+    src: url(font/LcdSolid.ttf);
+}
+
+
+
+/* ------------------------------- TEXT-SELECTION -------------------------------*/
+
+::-moz-selection {
+    background: var(--selectionColor);
+  }
+  ::selection {
+    background: var(--selectionColor);
+  }
+
+/* ----------------------------------- SCROLLBAR -----------------------------------*/
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+.gitCommitsData::-webkit-scrollbar{
+    height: 10px;
+}
+  
+::-webkit-scrollbar-track, .gitCommitsData::-webkit-scrollbar-track {
+    background-color: #101010;
+}
+   
+::-webkit-scrollbar-thumb, .gitCommitsData::-webkit-scrollbar-thumb {
+    background-color: var(--themeColor); 
+    border-top: solid 3px #292929;
+    border-bottom: solid 3px #292929;
+    border-left: solid 3px #292929;
+    border-right: solid 3px #292929;
+    cursor: none;
+    cursor: var(--cursorPointer), pointer;
+}
+
+
+
+/* ----------------------------------- MAIN -----------------------------------*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    cursor: var(--cursorDefault), auto;
+    text-transform: uppercase;
+    font-family: LcdSolid;
+    background-color: #292929;
+    font-size: 0.8em;
+    color: var(--themeColor);
+    padding: 2em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(imgs/mainBg.png);  
+    background-image: url(imgs/mainBg1.png);
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1280px;
+    gap: 1em;
+}
+
+.firstRow{
+    display: grid; 
+    grid-auto-flow: column dense; 
+    grid-auto-columns: 1fr; 
+    grid-auto-rows: 1fr; 
+    grid-template-columns: 0.5fr 1.5fr; 
+    grid-template-rows: 1fr; 
+    width: 100%;
+    gap: 1em;
+}
+.secondRow{
+    display: grid; 
+    grid-auto-flow: column dense; 
+    grid-auto-columns: 1fr; 
+    grid-auto-rows: 1fr; 
+    grid-template-columns: 1.2fr 1.6fr 0.2fr; 
+    grid-template-rows: 1fr;
+    width: 100%;
+    gap: 1em;
+}
+.thirdRow{
+    display: flex;
+    width: 100%;
+    gap: 1em;
+}
+
+.about, .experience, .selectedRepos, .otherRepos, .connect, .digitalId, .gitCommits, .uiverse, .footerIn, .currentSpotify{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    gap: 0.5em;
+    font-size: 1.15em;
+    width: 100%;
+}
+.aboutHeader, .experienceHeader, .selectedReposHeader, .otherReposHeader, .connectHeader, .digitalIdHeader, .gitCommitsHeader, .uiverseHeader, .footerHeader, .currentSpotifyHeader{
+    width: max-content;
+    color: black;
+    background-color: var(--themeColor);
+    padding: 0.25em;
+}
+.skillsHeaderIn{
+    margin: 2em 0 1em 0;
+}
+
+.aboutData, .experienceData, .selectedReposData, .otherReposData, .connectData, .digitalIdData, .gitCommitsData, .uiverseData, .currentSpotifyData{
+    width: 100%;
+    border: 1px solid var(--themeColor);
+    padding: 1em;
+    height: 100%;
+}
+.selectedReposData, .otherReposData{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    max-height: 184.67px;
+}
+.digitalIdData{
+    padding: 1em 0 0 0;
+}
+.experienceData{
+    padding: 0;
+}
+.experienceData table{
+    border-spacing: 1em;
+    width: 100%;
+}
+.experienceData table td{
+    text-align: center;
+}
+.experienceData table td:nth-child(1){
+    text-align: start;
+}
+.experienceData table td:last-child{
+    text-align: end;
+}
+
+.connectSocialApp{
+    padding: 0.15em 0 0.15em 0;
+    cursor: none;
+    cursor: var(--cursorPointer), pointer;
+}
+
+.firstSideCard{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1em;
+    height: 100%;
+}
+
+.repoList{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5em;
+}
+.divider{
+    display: none;
+}
+.listRows{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.15em 0 0.15em 0;
+    cursor: none;
+    cursor: var(--cursorPointer), pointer;
+}
+.listRows:hover, .connectSocialApp:hover{
+    background-color: var(--themeColor);
+    color: black;
+}
+.listRows span:nth-child(1){
+    text-align: left;
+    width: 30%;
+}
+.listRows span:nth-child(2){
+    width: 100%;
+    text-align: left;
+}
+.listRows span:last-child{
+    text-align: right;
+}
+
+.topFive:hover{
+    cursor: none;
+    cursor: var(--cursorPointer), pointer;
+    opacity: 0.75;
+}
+.uiverseWins{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    margin-top: 1em;
+    width: max-content;
+    gap: 0.15em;
+}
+.win{
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    color: var(--themeColor);
+    background-color: transparent;
+    font-family: LcdSolid;
+    cursor: none;
+    cursor: var(--cursorPointer), pointer;
+}
+.win svg{
+    margin-bottom: -0.25em;
+    fill: var(--themeColor);
+}
+.win:hover{
+    opacity: 0.75;
+}
+
+.visitUiverseBtn, .visitGithubBtn{
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+.visitUiverse, .visitEmail, .visitGithub{
+    width: max-content;
+    margin-top: 1em;
+    border: none;
+    outline: none;
+    font-family: LcdSolid;
+    padding: 0.75em;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    background-color: transparent;
+    color: var(--themeColor);
+    cursor: none;
+    cursor: var(--cursorPointer), pointer;
+    gap: 0.5em;
+    border: 1px solid var(--themeColor);
+}
+.visitEmail{
+    align-items: start;
+    justify-content: start;
+    border: none;
+    padding: 0;
+    height: 2em;
+}
+.visitUiverse:hover, .visitGithub:hover{
+    background-color: var(--themeColor);
+    color: black;
+}
+.visitUiverse:hover svg, .visitGithub:hover svg{
+    fill: black;
+}
+.visitEmail:hover{
+    opacity: 0.7;
+}
+.visitUiverse svg, .visitEmail svg, .visitGithub svg{
+    margin-bottom: -0.1em;
+    fill: var(--themeColor);
+}
+.visitEmail svg{
+    margin-top: -0.1em;
+}
+
+.space{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--themeColor);
+    padding: 1em;
+}
+
+.nameData{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--themeColor);
+    padding: 0 1em 1em 1em;
+}
+.nameText{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+.mainName{
+    font-size: 2em;
+    margin-top: 0.25em;
+}
+.accessData{
+    align-self: end;
+    background-color: var(--themeColor);
+    padding: 0.25em;
+    color: black;
+    text-align: right;
+}
+.pfpImage{
+    position: relative;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    width: max-content;
+}
+.pfpImage:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 350px;
+    height: 350px;
+    background-color: var(--tint);
+}
+.pfpImage img{
+    width: 350px;
+    height: 350px;
+    aspect-ratio: 1/1;
+    border-right: 1px solid var(--themeColor);
+}
+.imgAboutData{
+    padding: 1em;
+}
+
+.downloadCV{
+    background-color: transparent;
+    padding: 0.75em;
+    border: none;
+    outline: none;
+    font-family: LcdSolid;
+    font-size: 1em;
+    font-weight: normal;
+    color: var(--themeColor);
+    border: 1px solid var(--themeColor);
+    cursor: none;
+    cursor: var(--cursorPointer), pointer;
+}
+.downloadCV:hover{
+    color: black;
+    background-color: var(--themeColor);
+}
+
+.digitalIdFooter{
+    padding: 1.5em;
+    border-top: 1px solid var(--themeColor);
+}
+
+.social{
+    height: 85%;
+}
+
+.openData{
+    border: 1px solid var(--themeColor);
+    padding: 1em;
+    display: none;
+    align-items: left;
+    justify-content: left;
+    flex-direction: column;
+    width: 100%;
+}
+
+.openBtns{
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    width: 100%;
+    margin-top: 1em;
+    gap: 1em;
+}
+.visitGit, .visitSite, .visitFigma{
+    border: 1px solid var(--themeColor);
+    background-color: transparent;
+    color: var(--themeColor);
+    padding: 0.5em;
+    font-family: LcdSolid;
+    cursor: none;
+    cursor: var(--cursorPointer), pointer;
+}
+.visitGit:hover, .visitSite:hover, .visitFigma:hover{
+    border: 1px solid var(--themeColor);
+    background-color: var(--themeColor);
+    color: black;
+    padding: 0.5em;
+}
+
+.currently-playing{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 1em;
+    width: 100%;
+    height: 100%;
+}
+.song-cover{
+    position: relative;
+    min-width: 150px;
+    min-height: 150px;
+    width: 150px;
+    height: 150px;
+    aspect-ratio: 1/1;
+}
+.song-cover #Path-2, .song-cover #Path-3, .song-cover #Path-5, .song-cover #Path-7, .song-cover #Path-9, .song-cover #Path-10{
+    fill: var(--themeColor);
+}
+.song-cover svg{
+    padding: 1.5em;
+}
+.song-cover:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    aspect-ratio: 1/1;
+    width: 150px;
+    height: 150px;
+    background-color: var(--tintSongCover);
+}
+.songData{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    gap: 0.5em;
+}
+.song-info .song-name{
+    font-size: 1.35em;
+}
+
+.progressStamp{
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    gap: 0.5em;
+}
+.timestamps{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.progress-bar {
+    width: 100%;
+    height: 5px;
+    background-color: var(--tint);
+}
+.progress {
+    width: 0%;
+    height: 100%;
+    background-color: var(--themeColor);
+}
+
+.currentSpotify{
+    width: 35%;
+}
+.gitCommits{
+    width: 65%;
+}
+.gitCommitsData{
+    padding: 1em 1em 0 1em;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+}
+.calendar{
+    width: max-content;
+    font-family: LcdSolid !important;
+    margin: 0em !important;
+    border: none !important;
+    min-height: auto !important;
+    padding: 0em !important;
+}
+.ContributionCalendar-day[data-level='0'] {
+    background-color: var(--themeColor) !important;
+    opacity: 0.2;
+}
+.ContributionCalendar-day[data-level='1'] {
+    background-color: var(--gitL1) !important;
+}
+.ContributionCalendar-day[data-level='2'] {
+    background-color: var(--gitL2) !important;
+}
+.ContributionCalendar-day[data-level='3'] {
+    background-color: var(--gitL3) !important;
+}
+.ContributionCalendar-day[data-level='4'] {
+    background-color: var(--gitL4) !important;
+}
+
+.js-calendar-graph{
+    margin: 0;
+    padding: 0;
+}
+/* Hide unwanted elements */
+.contrib-column, .contrib-footer, .sr-only, thead, .ContributionCalendar-label{
+    display: none !important;
+}
+/* Remove border from graph */
+.js-calendar-graph-svg {
+    border: none !important;
+}
+
+
+
+:root {
+    --themeColor: #53FFB0;
+    --selectionColor: rgb(83, 255, 176, 0.5);
+    --tint: rgb(83, 255, 176, 0.1); /* rgb(83, 255, 176, 0.3); USE IF IMAGE IS NORMAL */
+    --tintSongCover: rgb(83, 255, 176, 0.3);
+    --cursorDefault: url('svgs/cursorSVGS/cursorGreen.svg');
+    --cursorPointer: url('svgs/cursorSVGS/pointerGreen.svg');
+    --gitL4: rgb(83, 255, 176, 1);
+    --gitL3: rgb(83, 255, 176, 0.8);
+    --gitL2: rgb(83, 255, 176, 0.6);
+    --gitL1: rgb(83, 255, 176, 0.4);
+}
+[data-theme="red"] {
+    --themeColor: #FF1212;
+    --selectionColor: rgb(255, 18, 18, 0.5);
+    --tint: rgb(255, 18, 18, 0.1); /* rgb(83, 255, 176, 0.3); USE IF IMAGE IS NORMAL */
+    --tintSongCover: rgb(255, 18, 18, 0.3);
+    --cursorDefault: url('svgs/cursorSVGS/cursorRed.svg');
+    --cursorPointer: url('svgs/cursorSVGS/pointerRed.svg');
+    --gitL4: rgb(255, 18, 18, 1);
+    --gitL3: rgb(255, 18, 18, 0.8);
+    --gitL2: rgb(255, 18, 18, 0.6);
+    --gitL1: rgb(255, 18, 18, 0.4);
+}
+[data-theme="white"] {
+    --themeColor: #ECECEC;
+    --selectionColor: rgb(236, 236, 236, 0.5);
+    --tint: rgb(236, 236, 236, 0.1); /* rgb(83, 255, 176, 0.3); USE IF IMAGE IS NORMAL */
+    --tintSongCover: rgb(236, 236, 236, 0.3);
+    --cursorDefault: url('svgs/cursorSVGS/cursorWhite.svg');
+    --cursorPointer: url('svgs/cursorSVGS/pointerWhite.svg');
+    --gitL4: rgb(236, 236, 236, 1);
+    --gitL3: rgb(236, 236, 236, 0.8);
+    --gitL2: rgb(236, 236, 236, 0.6);
+    --gitL1: rgb(236, 236, 236, 0.4);
+}
+[data-theme="purple"] {
+    --themeColor: #FF9AFF;
+    --selectionColor: rgb(255, 154, 255, 0.5);
+    --tint: rgb(255, 154, 255, 0.1); /* rgb(83, 255, 176, 0.3); USE IF IMAGE IS NORMAL */
+    --tintSongCover: rgb(255, 154, 255, 0.3);
+    --cursorDefault: url('svgs/cursorSVGS/cursorPurple.svg');
+    --cursorPointer: url('svgs/cursorSVGS/pointerPurple.svg');
+    --gitL4: rgb(255, 154, 255, 1);
+    --gitL3: rgb(255, 154, 255, 0.8);
+    --gitL2: rgb(255, 154, 255, 0.6);
+    --gitL1: rgb(255, 154, 255, 0.4);
+}
+.width-full{
+    margin-top: 0.5em;
+    /* display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-left: 0.25em; */
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1280px;
+    gap: 0.5em;
+    margin-top: 4em;
+}
+.themeButtons{
+    display: flex;
+    gap: 0.5em;
+    max-width: 1280px;
+}
+.green{
+    background-color: #53FFB0;
+    color: black;
+}
+.green, .red, .white, .purple{
+    padding: 0.25em;
+    cursor: none;
+    cursor: var(--cursorPointer), pointer;
+}
+.designedBy{
+    text-align: right;
+}
+.designedByLink0{
+    text-decoration: underline;
+}
+.designedByLink:hover, .designedByLink0:hover{
+    cursor: none;
+    cursor: var(--cursorPointer), pointer;
+    opacity: 0.75;
+}
+
+.listRows:hover{
+    background-color: var(--themeColor);
+    color: black;
+}
+.listRows:focus{
+    background-color: var(--themeColor);
+    color: black;
+}
+
+
+
+@media screen and (max-width: 1140px) {
+    .secondRow{
+        display: grid;
+        grid-template-columns: 9fr 1fr;
+        grid-template-rows: auto auto;
+    }
+    .selectedRepos {
+        grid-column: 1 / -1;
+    }
+    .otherRepos {
+        grid-column: 1 / 2;
+    } 
+    .connect {
+        grid-column: 2 / 3;
+    }
+}
+@media screen and (max-width: 1020px) {
+    .song-info .song-name{
+        font-size: 1.15em;
+    }
+}
+@media screen and (max-width: 950px) {
+    .firstRow{
+        display: grid;
+        grid-template-columns: 9fr 1fr;
+        grid-template-rows: auto auto;
+    }
+    .digitalId {
+        grid-column: 1 / -1;
+        grid-row: 1;
+      }
+      
+      .firstSideCard {
+        grid-column: 1 / -1;
+        grid-row: 2;
+      }
+}
+@media screen and (max-width: 885px) {
+    .song-cover{
+        min-width: 100px;
+        min-height: 100px;
+        width: 100px;
+        height: 100px;
+    }
+    .song-cover:before {
+        width: 100px;
+        height: 100px;
+    }
+}
+@media screen and (max-width: 820px) {
+    footer{
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0.75em;
+    }
+    .designedBy, .copyright{
+        text-align: center;
+    }
+}
+@media screen and (max-width: 745px) {
+    .thirdRow{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 100%;
+    }
+    .currentSpotify,.gitCommits{
+        width: 100%;
+    }
+    .song-info .song-name{
+        font-size: 1.35em;
+    }
+}
+@media screen and (max-width: 600px) {
+    .pfpImage:before, .pfpImage img{
+        width: 250px;
+        height: 350px;
+    }
+    .pfpImage img{
+        object-fit: cover;
+    }
+}
+@media screen and (max-width: 524px) {
+    .secondRow{
+        display: grid;
+        grid-template-columns: 9fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+    .selectedRepos {
+        grid-column: 1 / -1;
+    } 
+    .otherRepos {
+        grid-column: 1 / -1;
+    }
+    .connect {
+        grid-column: 1 / -1;
+    }
+    .selectedReposData,.otherReposData{
+        max-height: none;
+    }
+    .visitEmail{
+        margin-top: 0.5em;
+    }
+}
+@media screen and (max-width: 500px) {
+    .pfpImage{
+        flex-direction: column;
+        width: 100%;
+    }
+    .pfpImage:before, .pfpImage img{
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid var(--themeColor);
+    }
+    .imgAboutData{
+        width: 100%;
+    }
+    .green, .red, .white, .purple{
+        margin-top: -0.25em;
+    }
+    .nameData{
+        gap: 0.5em;
+    }
+    .mainName{
+        font-size: 1.75em;
+    }
+    .currently-playing{
+        min-width: 0;
+    }
+    .song-info .song-name{
+        font-size: 1.1em;
+    }
+    .openBtns{
+        flex-wrap: wrap;
+    }
+    .listRows{
+        gap: 0.5em;
+    }
+}
+@media screen and (max-width: 405px) {
+    .divider{
+        display: block;
+        width: 100%;
+        border: 1px solid var(--themeColor);
+    }
+}
+@media screen and (max-width: 380px) {
+    .song-cover{
+        min-width: 100px;
+        min-height: 100px;
+        width: 100px;
+        height: 100px;
+    }
+    .song-cover:before {
+        width: 100px;
+        height: 100px;
+    }
+}
+@media screen and (max-width: 310px) {
+    .song-cover{
+        min-width: 70px;
+        min-height: 70px;
+        width: 70px;
+        height: 70px;
+    }
+    .song-cover:before {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+
+/* ------------------------------------- 404 ------------------------------------- */
+
+.notFound{
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+.windowCard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 400px;
+    height: 250px;
+    border: 1px solid var(--themeColor);
+}
+.windowTopBar{
+    width: 100%;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 0.5em;
+    padding-right: 0.5em;
+    border-bottom: 1px solid var(--themeColor);
+    color: var(--themeColor);
+}
+.close{
+    padding: 0.25em 0.5em 0.25em 0.5em;
+}
+.max{
+    font-size: 1.5em;
+    padding: 0.05em 0.35em 0.05em 0.35em;
+}
+.min{
+    padding: 0.35em 0.75em 0.35em 0.75em;
+}
+.min:hover, .max:hover, .close:hover{
+    background-color: var(--themeColor);
+    color: black;
+    cursor: none;
+    cursor: var(--cursorPointer), pointer;
+}
+.windowCardData{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    color: var(--themeColor);
+    text-align: center;
+    font-size: 1.5em;
+}
+.homepageButton{
+    padding: 0.75em;
+    border: 1px solid var(--themeColor);
+    outline: none;
+    color: var(--themeColor);
+    background-color: transparent;
+    font-family: LcdSolid;
+    margin-top: 1.5em;
+    cursor: none;
+    cursor: var(--cursorPointer), pointer;
+}
+.homepageButton:hover{
+    background-color: var(--themeColor);
+    color: black;
+}
+
+
+
+/* -------------------------------- SMALL-DEVICE -------------------------------- */
+
+.small_device{
+    width: 100%;
+    height: 100dvh;
+    display: none;
+    padding: 5px;
+  }
+  .small_device_card{
+    width: 100%;
+    padding: 0.75em;
+    font-size: 0.5em;
+    border: 1px solid var(--themeColor);
+  }
+  .small_device_text{
+    font-weight: bold;
+    font-size: clamp(0.1rem, 0.3043rem + 3.4783vw, 3rem);
+    color: var(--themeColor);
+  }
+  
+  @media only screen and (max-width: 279px) {
+    .main, footer, .notFound{
+        display: none;
+    }
+    body{
+      margin: 0;
+      padding: 0;
+    }
+    .small_device{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        color: var(--themeColor);
+    }
+  }
