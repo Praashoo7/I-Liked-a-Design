@@ -16,11 +16,35 @@
     <meta name="twitter:image" content="https://praashoo7.github.io/I-Liked-a-Design/imgs/ReadMe-Images/OGImg.png"/>
     <meta name="description" content="I developed some of the designs that I just can't resist bringing to life!"/>
     <link rel="stylesheet" href="index.css">
-    <link rel="icon" href="imgs/mainIcon.png">
+    <link rel="icon" id="windowIcon" href="">
     <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"/>
 </head>
 <body>
+
+    <div class="creditInfo" id="creditInfo">
+        <div class="creditInfoCard">
+            <div class="creditInfoTopBar">
+                <div class="windowTitle">Credits</div>
+                <div class="windowControles">
+                    <div class="min">&#8210;</div>
+                    <div class="max">&#9633;</div>
+                    <div class="close" onclick="closeHelp()">&#10005;</div>
+                </div>
+            </div>
+            <div class="creditInfoCardData">
+                <span>This Portfolio is designed by <span class="designedByLink0" onclick="window.open('https://x.com/facumontanaro_/status/1833155791777378475')">Facu Motanaro</span>, this is not my Portfolio! I am developing some of the designs that I just can't resist bringing to life!<br><br>
+                
+                The design and code may not be used, copied, modified, or distributed without the explicit permission of both Prashant [Me] and Facu Motanaro [Designer].
+                
+                You can Check out my Original Portfolio below and also check out Facu Motanaro's Portfolio!</span>
+                <div class="openBtns">
+                    <button class="visitSite" onclick="window.open('https://praashoo7.github.io/Portfolio/')">Visit OG</button>
+                    <button class="visitSite" onclick="window.open('https://facumontanaro.com/')">Facu's Portfolio</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="main">
         <div class="firstRow">
@@ -353,7 +377,7 @@
                 </div>
             </div>
         </div>
-        <footer>
+        <footer class="footer">
             <div class="themeButtons">
                 <div class="green" id="green" onclick="themeChange(this.id)">Green</div>
                 <div class="red" id="red" onclick="themeChange(this.id)">Red</div>
