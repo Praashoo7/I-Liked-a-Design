@@ -18,4 +18,4 @@ This Portfolio is designed by Facu Motanaro, unlike my original portfolio, which
 
 ## License
 
-I-Liked-a-Design-Part-2 is open-source Software Licensed under the [MIT License](https://github.com/Praashoo7/I-Liked-a-Design-Part-2/blob/main/LICENSE)
+I-Liked-a-Design-Part-2 is not to be used by Anyone Without Permission of the Designer[Facu Motanaro] and Me!
