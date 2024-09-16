@@ -20,4 +20,9 @@ My [Portfolio](https://praashoo7.github.io/Portfolio/)
 
 ## License
 
-I-Liked-a-Design-Part-2 is not to be used by Anyone Without Permission of the Designer[Facu Motanaro] and Me!
+This project showcases a portfolio design originally created by Facu Motanaro.
+The HTML, CSS, and JavaScript implementation is the work of Prashant[Owner of this Repository].
+
+All rights reserved. The design and code in this repository may not be used, copied, modified, or distributed without the explicit permission of both Prashant[Owner of this Repository] and Facu Motanaro.
+
+© 2024 Prashant
