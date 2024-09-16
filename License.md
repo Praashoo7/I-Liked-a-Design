@@ -5,6 +5,5 @@ All rights reserved.
 The design rights belong to Facu Motanaro, and the code copyright belongs to Prashant.
 Neither the design nor the code in this repository may be used, copied, modified, or distributed without the explicit permission of both Prashant and Facu Motanaro.
 
-
 Design: Facu Motanaro
 Code Implementation: © 2024 Prashant
