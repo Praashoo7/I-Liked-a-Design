@@ -140,7 +140,11 @@ window.addEventListener('load', function() {
     if(window.innerWidth < 281){
     } else {
         openHelp()
-        document.getElementById('green').style.backgroundColor = "#53FFB0"
+        const savedTheme = localStorage.getItem('theme') || 'green';
+        if(savedTheme == 'green'){document.getElementById(savedTheme).style.backgroundColor = "#53FFB0"}
+        else if(savedTheme == 'red'){document.getElementById(savedTheme).style.backgroundColor = "#FF1212"}
+        else if(savedTheme == 'white'){document.getElementById(savedTheme).style.backgroundColor = "#ECECEC"}
+        else if(savedTheme == 'purple'){document.getElementById(savedTheme).style.backgroundColor = "#FF9AFF"}   
     }
 });
 

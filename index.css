@@ -603,10 +603,6 @@ footer{
     gap: 0.5em;
     max-width: 1280px;
 }
-.green{
-    background-color: #53FFB0;
-    color: black;
-}
 .green, .red, .white, .purple{
     padding: 0.25em;
     cursor: none;
