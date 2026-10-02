@@ -212,6 +212,7 @@ body{
     justify-content: start;
     flex-direction: column;
     margin-top: 1em;
+    margin-left: 1em;
     width: max-content;
     gap: 0.15em;
 }
@@ -495,6 +496,7 @@ body{
 }
 .calendar{
     width: max-content;
+    color: var(--themeColor) !important;
     font-family: LcdSolid !important;
     margin: 0em !important;
     border: none !important;

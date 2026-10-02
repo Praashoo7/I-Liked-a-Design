@@ -14,7 +14,10 @@ function closeHelp(){
 
 /* ------------------------------ CONNECTING-GITHUB ------------------------------ */
 
-GitHubCalendar(".calendar", "praashoo7", { responsive: true });
+GitHubCalendar(".calendar", "praashoo7", { responsive: true }).then(() => {
+  const skipLink = document.querySelector('.calendar a[href*="year-link"]');
+  if (skipLink) skipLink.remove();
+});
 
 
 
