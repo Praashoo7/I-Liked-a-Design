@@ -496,7 +496,6 @@ body{
 }
 .calendar{
     width: max-content;
-    color: var(--themeColor) !important;
     font-family: LcdSolid !important;
     margin: 0em !important;
     border: none !important;
